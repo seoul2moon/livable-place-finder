@@ -1,0 +1,1648 @@
+[
+  {
+    "id": "subway_station",
+    "name_ko": "지하철역",
+    "domain": "transport",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 100,
+        "peak_from_m": 250,
+        "peak_to_m": 600,
+        "max_m": 1000
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.2,
+      "weekend": 1,
+      "night": 0.8
+    },
+    "source_hint": "국토교통부/서울열린데이터 도시철도역 좌표"
+  },
+  {
+    "id": "train_station",
+    "name_ko": "기차역(KTX/일반철도)",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 3000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 1200
+      }
+    },
+    "source_hint": "한국철도공사 역정보, 공공데이터포털"
+  },
+  {
+    "id": "bus_stop",
+    "name_ko": "버스정류장",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 400,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 150
+      }
+    },
+    "source_hint": "국토교통부 전국버스정류장 위치정보, TAGO"
+  },
+  {
+    "id": "airport_access",
+    "name_ko": "공항 접근성",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 30000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 12000
+      }
+    },
+    "source_hint": "한국공항공사 공항 좌표"
+  },
+  {
+    "id": "ic_highway",
+    "name_ko": "고속도로 IC",
+    "domain": "transport",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 5000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 300,
+        "peak_from_m": 1000,
+        "peak_to_m": 3000,
+        "max_m": 5000
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.2,
+      "weekend": 1,
+      "night": 0.8
+    },
+    "source_hint": "한국도로공사 IC 위치"
+  },
+  {
+    "id": "bike_lane",
+    "name_ko": "자전거도로/공공자전거",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "공공자전거 대여소(따릉이 등), 자전거도로 SHP"
+  },
+  {
+    "id": "gtx_express_bus",
+    "name_ko": "광역버스·GTX 정류장/역",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 2000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 800
+      }
+    },
+    "source_hint": "국토교통부 GTX 역사, 광역버스 정류장(TAGO)"
+  },
+  {
+    "id": "public_parking",
+    "name_ko": "공영주차장",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 400,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 150
+      }
+    },
+    "source_hint": "공공데이터포털 전국주차장정보표준데이터"
+  },
+  {
+    "id": "car_free_living",
+    "name_ko": "차 없는 생활 가능 여부(지표)",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 500
+      }
+    },
+    "source_hint": "지하철·버스·편의시설 접근성 합성 지표(자체 산출)"
+  },
+  {
+    "id": "bus_headway",
+    "name_ko": "버스 배차간격(지표)",
+    "domain": "transport",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 400,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "TAGO 버스노선 배차정보 기반 평균 배차간격 지표"
+  },
+  {
+    "id": "kindergarten",
+    "name_ko": "유치원",
+    "domain": "education",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 700,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "교육부 학교알리미/NEIS 유치원 정보"
+  },
+  {
+    "id": "daycare",
+    "name_ko": "어린이집",
+    "domain": "education",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "보건복지부 어린이집 정보공개포털"
+  },
+  {
+    "id": "elementary_school",
+    "name_ko": "초등학교",
+    "domain": "education",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 50,
+        "peak_from_m": 150,
+        "peak_to_m": 500,
+        "max_m": 800
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.3,
+      "weekend": 0.6,
+      "night": 0.5
+    },
+    "source_hint": "NEIS 학교기본정보, 학교알리미"
+  },
+  {
+    "id": "middle_school",
+    "name_ko": "중학교",
+    "domain": "education",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 1200,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 80,
+        "peak_from_m": 200,
+        "peak_to_m": 700,
+        "max_m": 1200
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.3,
+      "weekend": 0.6,
+      "night": 0.5
+    },
+    "source_hint": "NEIS 학교기본정보"
+  },
+  {
+    "id": "high_school",
+    "name_ko": "고등학교",
+    "domain": "education",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 80,
+        "peak_from_m": 250,
+        "peak_to_m": 900,
+        "max_m": 1500
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.3,
+      "weekend": 0.6,
+      "night": 0.5
+    },
+    "source_hint": "NEIS 학교기본정보"
+  },
+  {
+    "id": "academy_cluster",
+    "name_ko": "학원가",
+    "domain": "education",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.2,
+      "weekend": 0.9,
+      "night": 1.3
+    },
+    "source_hint": "NEIS 학원교습소 정보, 상권정보"
+  },
+  {
+    "id": "library",
+    "name_ko": "도서관",
+    "domain": "education",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "전국도서관표준데이터"
+  },
+  {
+    "id": "university",
+    "name_ko": "대학교·대학가",
+    "domain": "education",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 2000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 200,
+        "peak_from_m": 400,
+        "peak_to_m": 1500,
+        "max_m": 2000
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.1,
+      "weekend": 0.9,
+      "night": 1.2
+    },
+    "source_hint": "대학알리미, 공공데이터포털"
+  },
+  {
+    "id": "culture_center",
+    "name_ko": "문화센터/평생학습관",
+    "domain": "education",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "전국문화시설표준데이터"
+  },
+  {
+    "id": "general_hospital",
+    "name_ko": "종합병원(대형병원)",
+    "domain": "medical",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 3000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 300,
+        "peak_from_m": 600,
+        "peak_to_m": 2500,
+        "max_m": 3000
+      }
+    },
+    "source_hint": "건강보험심사평가원 병원정보서비스"
+  },
+  {
+    "id": "clinic",
+    "name_ko": "의원(동네병원)",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 700,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "HIRA 병원정보서비스"
+  },
+  {
+    "id": "pediatric_clinic",
+    "name_ko": "소아과(소아청소년과)",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "HIRA 병원정보(진료과목)"
+  },
+  {
+    "id": "pharmacy",
+    "name_ko": "약국",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "HIRA 약국정보, 전국약국현황"
+  },
+  {
+    "id": "emergency_room",
+    "name_ko": "응급실",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 5000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 2500
+      }
+    },
+    "source_hint": "국립중앙의료원 응급의료기관"
+  },
+  {
+    "id": "oriental_clinic",
+    "name_ko": "한의원",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 350
+      }
+    },
+    "source_hint": "HIRA 병원정보"
+  },
+  {
+    "id": "dental_clinic",
+    "name_ko": "치과",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 700,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "건강보험심사평가원 병원정보서비스"
+  },
+  {
+    "id": "nursing_hospital",
+    "name_ko": "요양병원",
+    "domain": "medical",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 2500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 1000
+      }
+    },
+    "source_hint": "건강보험심사평가원 병원정보(요양병원)"
+  },
+  {
+    "id": "convenience_store",
+    "name_ko": "편의점",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "source_hint": "소상공인시장진흥공단 상가(상권)정보"
+  },
+  {
+    "id": "supermarket",
+    "name_ko": "슈퍼마켓/마트",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 700,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "소상공인 상가정보"
+  },
+  {
+    "id": "large_mart",
+    "name_ko": "코스트코·대형마트",
+    "domain": "convenience",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 3000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 300,
+        "peak_from_m": 500,
+        "peak_to_m": 1500,
+        "max_m": 3000
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 0.75,
+      "night": 0.6
+    },
+    "source_hint": "산업통상자원부 대규모점포, 상가정보"
+  },
+  {
+    "id": "traditional_market",
+    "name_ko": "전통시장",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "소상공인시장진흥공단 전통시장 정보"
+  },
+  {
+    "id": "department_store",
+    "name_ko": "백화점·대형쇼핑몰",
+    "domain": "convenience",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 4000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 200,
+        "peak_from_m": 600,
+        "peak_to_m": 2500,
+        "max_m": 4000
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 0.7,
+      "night": 0.6
+    },
+    "source_hint": "대규모점포 정보"
+  },
+  {
+    "id": "cafe_restaurant_street",
+    "name_ko": "카페/음식점 거리",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 600,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 250
+      }
+    },
+    "source_hint": "소상공인 상가정보"
+  },
+  {
+    "id": "bank",
+    "name_ko": "은행/ATM",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 700,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "금융위원회 금융회사 정보, 상가정보"
+  },
+  {
+    "id": "post_office_public_office",
+    "name_ko": "우체국·주민센터",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "행정안전부 공공시설, 우정사업본부"
+  },
+  {
+    "id": "gym_sports_center",
+    "name_ko": "체육관·수영장·헬스장",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 350
+      }
+    },
+    "source_hint": "전국공공체육시설표준데이터, 상가정보"
+  },
+  {
+    "id": "cinema_culture",
+    "name_ko": "영화관/공연장",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 3000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 1300
+      }
+    },
+    "source_hint": "영화진흥위원회 영화상영관, 문화시설표준데이터"
+  },
+  {
+    "id": "pet_facility",
+    "name_ko": "동물병원/반려동물시설",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "농림축산식품부 동물병원, 상가정보"
+  },
+  {
+    "id": "coworking_cafe",
+    "name_ko": "코워킹/스터디카페",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 350
+      }
+    },
+    "source_hint": "소상공인 상가정보"
+  },
+  {
+    "id": "stadium_event_venue",
+    "name_ko": "경기장·대형 행사장",
+    "domain": "convenience",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 5000,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 500,
+        "peak_from_m": 1200,
+        "peak_to_m": 3000,
+        "max_m": 5000
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 0.6,
+      "night": 0.8
+    },
+    "source_hint": "전국체육시설표준데이터, 문화시설"
+  },
+  {
+    "id": "welfare_center",
+    "name_ko": "복지관(종합사회복지관)",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "보건복지부 사회복지시설 정보"
+  },
+  {
+    "id": "senior_center",
+    "name_ko": "경로당·노인복지관",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 350
+      }
+    },
+    "source_hint": "보건복지부 노인복지시설(경로당/노인복지관) 현황"
+  },
+  {
+    "id": "laundry",
+    "name_ko": "세탁소",
+    "domain": "convenience",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 400,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 150
+      }
+    },
+    "source_hint": "지방행정인허가 세탁업 데이터"
+  },
+  {
+    "id": "park_neighborhood",
+    "name_ko": "근린공원",
+    "domain": "nature",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 600,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 30,
+        "peak_from_m": 100,
+        "peak_to_m": 400,
+        "max_m": 600
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 1.2,
+      "night": 0.7
+    },
+    "source_hint": "전국도시공원정보표준데이터"
+  },
+  {
+    "id": "park_large",
+    "name_ko": "대형공원·호수공원",
+    "domain": "nature",
+    "kind": "bell",
+    "geometry": "point",
+    "radius_m": 2500,
+    "curve": {
+      "type": "bell",
+      "params": {
+        "min_m": 100,
+        "peak_from_m": 250,
+        "peak_to_m": 1200,
+        "max_m": 2500
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 1.1,
+      "night": 0.6
+    },
+    "source_hint": "전국도시공원정보표준데이터"
+  },
+  {
+    "id": "playground",
+    "name_ko": "어린이놀이터",
+    "domain": "nature",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "source_hint": "어린이놀이시설 정보, 공원 데이터"
+  },
+  {
+    "id": "river_stream",
+    "name_ko": "하천·산책로",
+    "domain": "nature",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "국토지리정보원 수계도, 하천정보"
+  },
+  {
+    "id": "mountain_trail",
+    "name_ko": "산·등산로",
+    "domain": "nature",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "산림청 등산로, 국토지리정보원"
+  },
+  {
+    "id": "sea_lake_view",
+    "name_ko": "바다/호수 조망",
+    "domain": "nature",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 2000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 800
+      }
+    },
+    "source_hint": "국토지리정보원 수계도, 해안선"
+  },
+  {
+    "id": "greenery_ratio",
+    "name_ko": "녹지율(주변 녹지)",
+    "domain": "nature",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 250
+      }
+    },
+    "source_hint": "환경부 토지피복도, 도시생태현황도"
+  },
+  {
+    "id": "walking_trail",
+    "name_ko": "산책로·둘레길",
+    "domain": "nature",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "두루누비/한국관광공사, 지자체 산책로"
+  },
+  {
+    "id": "police_station",
+    "name_ko": "경찰서·지구대·파출소",
+    "domain": "safety",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 450
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 1,
+      "night": 1.2
+    },
+    "source_hint": "경찰청 관서 위치"
+  },
+  {
+    "id": "fire_station",
+    "name_ko": "소방서·안전센터",
+    "domain": "safety",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 2000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 800
+      }
+    },
+    "source_hint": "소방청 소방서 위치"
+  },
+  {
+    "id": "cctv",
+    "name_ko": "CCTV 밀도",
+    "domain": "safety",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 200,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 80
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 1,
+      "night": 1.4
+    },
+    "source_hint": "공공데이터포털 CCTV 표준데이터"
+  },
+  {
+    "id": "safe_return_route",
+    "name_ko": "안심귀갓길/안심구역",
+    "domain": "safety",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 1,
+      "night": 1.4
+    },
+    "source_hint": "지자체 안심귀갓길, 여성안심구역"
+  },
+  {
+    "id": "crime_hotspot",
+    "name_ko": "범죄 다발지역",
+    "domain": "safety",
+    "kind": "negative",
+    "geometry": "metric",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "경찰청 범죄통계, 범죄주의구간(생활안전지도)"
+  },
+  {
+    "id": "flood_risk_area",
+    "name_ko": "침수/재해 위험지역",
+    "domain": "safety",
+    "kind": "negative",
+    "geometry": "metric",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "행정안전부 침수흔적도, 재해위험지구"
+  },
+  {
+    "id": "steep_slope",
+    "name_ko": "급경사/고지대",
+    "domain": "safety",
+    "kind": "negative",
+    "geometry": "metric",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "source_hint": "국토지리정보원 DEM 경사도"
+  },
+  {
+    "id": "school_zone",
+    "name_ko": "어린이보호구역",
+    "domain": "safety",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "source_hint": "표준노드링크 어린이보호구역"
+  },
+  {
+    "id": "street_lighting",
+    "name_ko": "가로등",
+    "domain": "safety",
+    "kind": "positive",
+    "geometry": "point",
+    "radius_m": 100,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 40
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1,
+      "weekend": 1,
+      "night": 1.6
+    },
+    "source_hint": "지자체 가로등 위치 표준데이터"
+  },
+  {
+    "id": "air_quality",
+    "name_ko": "대기질(미세먼지)",
+    "domain": "environment",
+    "kind": "negative",
+    "geometry": "metric",
+    "radius_m": 3000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 1500
+      }
+    },
+    "source_hint": "에어코리아 측정소, 환경부"
+  },
+  {
+    "id": "noise_major_road",
+    "name_ko": "대로·고속도로·고가도로 소음",
+    "domain": "environment",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 150,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 60
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.2,
+      "weekend": 0.9,
+      "night": 0.8
+    },
+    "source_hint": "국토교통부 도로망(표준노드링크), 환경부 소음지도"
+  },
+  {
+    "id": "noise_railway",
+    "name_ko": "철도(고가·화물선) 소음",
+    "domain": "environment",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "source_hint": "국가철도공단 철도선형, 환경부"
+  },
+  {
+    "id": "noise_aircraft",
+    "name_ko": "항공기 소음지역",
+    "domain": "environment",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 5000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 2000
+      }
+    },
+    "source_hint": "한국공항공사 소음영향도, 환경부"
+  },
+  {
+    "id": "overhead_power_line",
+    "name_ko": "송전탑·고압선",
+    "domain": "environment",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 150,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 60
+      }
+    },
+    "source_hint": "한국전력 송전선로 정보"
+  },
+  {
+    "id": "sunlight_view",
+    "name_ko": "일조·조망",
+    "domain": "environment",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 100,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 50
+      }
+    },
+    "source_hint": "건축물대장+DSM 일조 시뮬레이션"
+  },
+  {
+    "id": "flat_terrain",
+    "name_ko": "평지 접근성",
+    "domain": "environment",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 250
+      }
+    },
+    "source_hint": "국토지리정보원 DEM"
+  },
+  {
+    "id": "stairs_elevator",
+    "name_ko": "엘리베이터·계단 접근성(지표)",
+    "domain": "environment",
+    "kind": "positive",
+    "geometry": "metric",
+    "radius_m": 100,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 50
+      }
+    },
+    "source_hint": "건축물대장(승강기 유무)·무장애 보행 데이터 기반 지표"
+  },
+  {
+    "id": "express_bus_terminal",
+    "name_ko": "터미널(고속·시외버스)",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "공공데이터포털 터미널 정보"
+  },
+  {
+    "id": "waste_incinerator",
+    "name_ko": "쓰레기 소각장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 2000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 900
+      }
+    },
+    "source_hint": "환경부 폐기물처리시설, 지자체 자원회수시설"
+  },
+  {
+    "id": "landfill",
+    "name_ko": "쓰레기 매립지",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 2500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 1000
+      }
+    },
+    "source_hint": "한국환경공단 매립시설"
+  },
+  {
+    "id": "sewage_plant",
+    "name_ko": "하수·분뇨처리장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "환경부 하수처리시설, 물환경정보시스템"
+  },
+  {
+    "id": "crematorium_funeral",
+    "name_ko": "화장장·장례식장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "e하늘장사정보시스템"
+  },
+  {
+    "id": "cemetery_charnel",
+    "name_ko": "공동묘지·납골당(봉안당)",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "e하늘장사정보시스템"
+  },
+  {
+    "id": "industrial_complex",
+    "name_ko": "산업단지/공장지대",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 2000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 800
+      }
+    },
+    "source_hint": "한국산업단지공단 산업단지, 토지이용계획"
+  },
+  {
+    "id": "gas_station",
+    "name_ko": "주유소·LPG충전소",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 200,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 80
+      }
+    },
+    "source_hint": "한국석유공사 오피넷"
+  },
+  {
+    "id": "hazardous_facility",
+    "name_ko": "위험물 저장소·취급시설",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "화학물질안전원, 소방청 위험물 시설"
+  },
+  {
+    "id": "adult_entertainment",
+    "name_ko": "유흥·단란주점 밀집지",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.8,
+      "weekend": 1.2,
+      "night": 1.6
+    },
+    "source_hint": "소상공인 상가정보(업종), 청소년유해업소"
+  },
+  {
+    "id": "nightlife_street",
+    "name_ko": "번화가·술집(유흥가·먹자골목)",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.8,
+      "weekend": 1.3,
+      "night": 1.8
+    },
+    "source_hint": "소상공인 상가정보"
+  },
+  {
+    "id": "high_voltage_substation",
+    "name_ko": "변전소",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "한국전력 변전소 정보"
+  },
+  {
+    "id": "military_base",
+    "name_ko": "군부대·사격장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "국방부 군사시설보호구역(공개범위)"
+  },
+  {
+    "id": "prison_detention",
+    "name_ko": "교도소·구치소",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "법무부 교정시설"
+  },
+  {
+    "id": "homeless_welfare_facility",
+    "name_ko": "복지시설 인접(쪽방·노숙인시설 등)",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "source_hint": "지자체 복지시설, 쪽방촌 현황"
+  },
+  {
+    "id": "construction_redevelopment",
+    "name_ko": "공사장(대규모 공사·재개발)",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.5,
+      "weekend": 0.4,
+      "night": 0.2
+    },
+    "source_hint": "정비사업 정보몽땅, 건축허가 공개"
+  },
+  {
+    "id": "horse_racing",
+    "name_ko": "경마장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.6,
+      "weekend": 1.6,
+      "night": 0.5
+    },
+    "source_hint": "한국마사회 시설 위치"
+  },
+  {
+    "id": "cycle_boat_racing",
+    "name_ko": "경륜·경정장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.6,
+      "weekend": 1.6,
+      "night": 0.5
+    },
+    "source_hint": "국민체육진흥공단 경륜·경정장 위치"
+  },
+  {
+    "id": "offtrack_betting",
+    "name_ko": "장외발매소",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.8,
+      "weekend": 1.5,
+      "night": 0.6
+    },
+    "source_hint": "한국마사회/국민체육진흥공단 장외발매소 목록"
+  },
+  {
+    "id": "casino",
+    "name_ko": "카지노",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 800,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 300
+      }
+    },
+    "source_hint": "한국관광공사 카지노 사업장 목록"
+  },
+  {
+    "id": "gambling_arcade",
+    "name_ko": "사행성 게임장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.9,
+      "weekend": 1.2,
+      "night": 1.4
+    },
+    "source_hint": "게임물관리위원회·지방행정인허가 게임제공업"
+  },
+  {
+    "id": "love_hotel",
+    "name_ko": "러브호텔",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.8,
+      "weekend": 1.2,
+      "night": 1.5
+    },
+    "source_hint": "지방행정인허가 숙박업(모텔) + 키워드 보정"
+  },
+  {
+    "id": "red_light_district",
+    "name_ko": "성매매 집결지",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 200
+      }
+    },
+    "time_modifiers": {
+      "weekday": 0.8,
+      "weekend": 1.2,
+      "night": 1.5
+    },
+    "source_hint": "여성가족부 성매매 집결지 현황(공개 범위)"
+  },
+  {
+    "id": "livestock_farm",
+    "name_ko": "축사·양계장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "축산법 허가 가축사육업 등록 현황"
+  },
+  {
+    "id": "recycling_sorting",
+    "name_ko": "재활용 선별장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "source_hint": "환경부 폐기물처리시설 현황"
+  },
+  {
+    "id": "asphalt_concrete_plant",
+    "name_ko": "아스콘·레미콘 공장",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1500,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 600
+      }
+    },
+    "source_hint": "지방행정인허가 / 대기배출시설 현황"
+  },
+  {
+    "id": "thermal_power_plant",
+    "name_ko": "화력발전소",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 5000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 2000
+      }
+    },
+    "source_hint": "한국전력거래소 발전소 위치"
+  },
+  {
+    "id": "logistics_center",
+    "name_ko": "대형 물류센터",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 1000,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 400
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.3,
+      "weekend": 0.7,
+      "night": 1.2
+    },
+    "source_hint": "물류시설 인허가(물류창고업 등록) 현황"
+  },
+  {
+    "id": "bus_truck_depot",
+    "name_ko": "화물차·버스 차고지",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 600,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 250
+      }
+    },
+    "time_modifiers": {
+      "weekday": 1.2,
+      "weekend": 0.8,
+      "night": 1.3
+    },
+    "source_hint": "차고지 설치 현황(지자체), 화물자동차 휴게소 정보"
+  },
+  {
+    "id": "religious_facility",
+    "name_ko": "종교시설 인접",
+    "domain": "nuisance",
+    "kind": "negative",
+    "geometry": "point",
+    "radius_m": 300,
+    "curve": {
+      "type": "decay",
+      "params": {
+        "half_distance_m": 120
+      }
+    },
+    "source_hint": "지방행정인허가·카카오 로컬 키워드(교회/사찰 등). 기본 가중치 0, 개인 태도로만 반영"
+  }
+]

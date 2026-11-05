@@ -1,0 +1,11 @@
+{
+  "funeral_grave": ["crematorium_funeral", "cemetery_charnel"],
+  "gambling_nightlife": ["horse_racing", "cycle_boat_racing", "offtrack_betting", "casino", "gambling_arcade", "adult_entertainment", "red_light_district", "love_hotel", "nightlife_street"],
+  "religious": ["religious_facility"],
+  "welfare_adjacent": ["homeless_welfare_facility"],
+  "waste_odor": ["waste_incinerator", "landfill", "sewage_plant", "livestock_farm", "recycling_sorting", "asphalt_concrete_plant"],
+  "noise_vibration": ["noise_major_road", "noise_railway", "noise_aircraft", "military_base", "construction_redevelopment"],
+  "hazard": ["gas_station", "hazardous_facility", "thermal_power_plant", "high_voltage_substation", "overhead_power_line"],
+  "prison": ["prison_detention"],
+  "traffic_inducing": ["logistics_center", "bus_truck_depot", "express_bus_terminal"]
+}

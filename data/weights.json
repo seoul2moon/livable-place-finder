@@ -1,0 +1,688 @@
+{
+  "subway_station": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 2,
+    "senior": 1
+  },
+  "train_station": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "bus_stop": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "airport_access": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "ic_highway": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "bike_lane": {
+    "infant": 0,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "gtx_express_bus": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 2,
+    "senior": 1
+  },
+  "public_parking": {
+    "infant": 1,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "car_free_living": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 0,
+    "senior": 2
+  },
+  "bus_headway": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 0,
+    "senior": 2
+  },
+  "kindergarten": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 0
+  },
+  "daycare": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 0
+  },
+  "elementary_school": {
+    "infant": 1,
+    "school": 2,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "middle_school": {
+    "infant": 0,
+    "school": 2,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "high_school": {
+    "infant": 0,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "academy_cluster": {
+    "infant": 0,
+    "school": 2,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": -1
+  },
+  "library": {
+    "infant": 1,
+    "school": 2,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "university": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 0,
+    "senior": 0
+  },
+  "culture_center": {
+    "infant": 1,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "general_hospital": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "clinic": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "pediatric_clinic": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 0
+  },
+  "pharmacy": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "emergency_room": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "oriental_clinic": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "dental_clinic": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "nursing_hospital": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "convenience_store": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "supermarket": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 2,
+    "senior": 2
+  },
+  "large_mart": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 2,
+    "senior": 1
+  },
+  "traditional_market": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "department_store": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "cafe_restaurant_street": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 2,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "bank": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "post_office_public_office": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "gym_sports_center": {
+    "infant": 0,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "cinema_culture": {
+    "infant": 0,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "pet_facility": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "coworking_cafe": {
+    "infant": 0,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 0,
+    "senior": -1
+  },
+  "stadium_event_venue": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "welfare_center": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "senior_center": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 2
+  },
+  "laundry": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "park_neighborhood": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "park_large": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "playground": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 0
+  },
+  "river_stream": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 2,
+    "middle_aged": 2,
+    "senior": 2
+  },
+  "mountain_trail": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 2,
+    "senior": 2
+  },
+  "sea_lake_view": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "greenery_ratio": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 2,
+    "senior": 2
+  },
+  "walking_trail": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "police_station": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "fire_station": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "cctv": {
+    "infant": 1,
+    "school": 2,
+    "young_single": 2,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "safe_return_route": {
+    "infant": 0,
+    "school": 2,
+    "young_single": 2,
+    "middle_aged": 0,
+    "senior": 0
+  },
+  "crime_hotspot": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -2,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "flood_risk_area": {
+    "infant": -2,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "steep_slope": {
+    "infant": -2,
+    "school": -1,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -2
+  },
+  "school_zone": {
+    "infant": 2,
+    "school": 1,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 0
+  },
+  "street_lighting": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 1,
+    "senior": 1
+  },
+  "air_quality": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "noise_major_road": {
+    "infant": -2,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "noise_railway": {
+    "infant": -2,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "noise_aircraft": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "overhead_power_line": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "sunlight_view": {
+    "infant": 1,
+    "school": 1,
+    "young_single": 1,
+    "middle_aged": 2,
+    "senior": 2
+  },
+  "flat_terrain": {
+    "infant": 1,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 1,
+    "senior": 2
+  },
+  "stairs_elevator": {
+    "infant": 1,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 2
+  },
+  "express_bus_terminal": {
+    "infant": -1,
+    "school": -1,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "waste_incinerator": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -2,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "landfill": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -2,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "sewage_plant": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -2,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "crematorium_funeral": {
+    "infant": -1,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "cemetery_charnel": {
+    "infant": -1,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "industrial_complex": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "gas_station": {
+    "infant": -1,
+    "school": -1,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "hazardous_facility": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -2,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "adult_entertainment": {
+    "infant": -2,
+    "school": -2,
+    "young_single": 0,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "nightlife_street": {
+    "infant": -2,
+    "school": -1,
+    "young_single": 1,
+    "middle_aged": 0,
+    "senior": -2
+  },
+  "high_voltage_substation": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "military_base": {
+    "infant": -1,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "prison_detention": {
+    "infant": -1,
+    "school": -1,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "homeless_welfare_facility": {
+    "infant": -1,
+    "school": -1,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": 0
+  },
+  "construction_redevelopment": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "horse_racing": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "cycle_boat_racing": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "offtrack_betting": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "casino": {
+    "infant": -2,
+    "school": -2,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "gambling_arcade": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "love_hotel": {
+    "infant": -2,
+    "school": -2,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "red_light_district": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "livestock_farm": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "recycling_sorting": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "asphalt_concrete_plant": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "thermal_power_plant": {
+    "infant": -2,
+    "school": -2,
+    "young_single": -1,
+    "middle_aged": -2,
+    "senior": -2
+  },
+  "logistics_center": {
+    "infant": -1,
+    "school": -1,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "bus_truck_depot": {
+    "infant": -1,
+    "school": -1,
+    "young_single": 0,
+    "middle_aged": -1,
+    "senior": -1
+  },
+  "religious_facility": {
+    "infant": 0,
+    "school": 0,
+    "young_single": 0,
+    "middle_aged": 0,
+    "senior": 0
+  }
+}
